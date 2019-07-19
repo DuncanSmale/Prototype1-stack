@@ -7,7 +7,7 @@ public class GasObject : MonoBehaviour
 
     private void OnEnable()
     {
-        if (GasController.Controller.isIn(this) == false)
+        if (Time.time > 0.5f && GasController.Controller.isIn(this) == false)
         {
             GasController.Controller.addGas(this);
         }

@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GasController : MonoBehaviour
 {
@@ -10,17 +12,20 @@ public class GasController : MonoBehaviour
     public static GasController Controller
     {
         get { return controller; }
-        private set { controller = value; }
     }
     #endregion
 
     private List<GasObject> gasParticles;
 
     [SerializeField] float TimeToComplete = 30f;
+    [SerializeField] float scalingFactor = 1f;
+
+    private Image gasMeter;
+    private float fillAmount = 0;
 
     private int TotalParticles;
     private int CurrentNumParticles;
-
+    
     private void Awake()
     {
 
@@ -39,6 +44,7 @@ public class GasController : MonoBehaviour
         gasParticles = new List<GasObject>(FindObjectsOfType<GasObject>());
         TotalParticles = gasParticles.Count;
         CurrentNumParticles = TotalParticles;
+        gasMeter = GameObject.FindGameObjectWithTag("GasMeter").GetComponent<Image>();
     }
 
     public void addGas(GasObject _gas)
@@ -61,6 +67,12 @@ public class GasController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        FillGasMeter();
+    }
+
+    private void FillGasMeter()
+    {
+        fillAmount += Time.deltaTime * (0.1f * ((float)CurrentNumParticles/TotalParticles)) / TimeToComplete * scalingFactor;
+        gasMeter.fillAmount = fillAmount;
     }
 }
