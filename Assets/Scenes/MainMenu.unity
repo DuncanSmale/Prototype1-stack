@@ -201,8 +201,88 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
+=======
+--- !u!114 &30550115
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30550111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  volumeTrigger: {fileID: 30550114}
+  volumeLayer:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  stopNaNPropagation: 1
+  finalBlitToCameraTarget: 0
+  antialiasingMode: 0
+  temporalAntialiasing:
+    jitterSpread: 0.75
+    sharpness: 0.25
+    stationaryBlending: 0.95
+    motionBlending: 0.85
+  subpixelMorphologicalAntialiasing:
+    quality: 2
+  fastApproximateAntialiasing:
+    fastMode: 0
+    keepAlpha: 0
+  fog:
+    enabled: 1
+    excludeSkybox: 1
+  debugLayer:
+    lightMeter:
+      width: 512
+      height: 256
+      showCurves: 1
+    histogram:
+      width: 512
+      height: 256
+      channel: 3
+    waveform:
+      exposure: 0.12
+      height: 256
+    vectorscope:
+      size: 256
+      exposure: 0.12
+    overlaySettings:
+      linearDepth: 0
+      motionColorIntensity: 4
+      motionGridSize: 64
+      colorBlindnessType: 0
+      colorBlindnessStrength: 1
+  m_Resources: {fileID: 11400000, guid: d82512f9c8e5d4a4d938b575d47f88d4, type: 2}
+  m_ShowToolkit: 0
+  m_ShowCustomSorter: 0
+  breakBeforeColorGrading: 0
+  m_BeforeTransparentBundles: []
+  m_BeforeStackBundles: []
+  m_AfterStackBundles: []
+--- !u!114 &30550116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 30550111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sharedProfile: {fileID: 11400000, guid: 49123048f0dae1c4085ce6aa32341c83, type: 2}
+  isGlobal: 1
+  blendDistance: 0
+  weight: 1
+  priority: 0
+>>>>>>> 83c0b1df9a0ebbf66936b666e32cc18d7e6c05ca
 --- !u!1 &206304662
 GameObject:
   m_ObjectHideFlags: 0
@@ -213,6 +293,9 @@ GameObject:
   m_Component:
   - component: {fileID: 206304664}
   - component: {fileID: 206304663}
+  - component: {fileID: 206304666}
+  - component: {fileID: 206304667}
+  - component: {fileID: 206304665}
   m_Layer: 0
   m_Name: _MusicController
   m_TagString: Untagged
@@ -331,6 +414,215 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206304665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23a0de6e0b60e8d4eba102a8f6600c73, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_source: {fileID: 206304663}
+  sfx_source: {fileID: 206304666}
+  HoverSFX: {fileID: 206304667}
+--- !u!82 &206304666
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3d4b3b11ee05a8d44abce3921680d021,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: c2a978debf9c45740b22fbcbc887a14b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.247
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 197
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &206304667
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 52f71c3bbfd777142a2cb83e3287a8f8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9521128c53b702c49b93fe816d1b5d5d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.343
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 196
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &274205282
 GameObject:
   m_ObjectHideFlags: 0
@@ -419,6 +711,7 @@ MonoBehaviour:
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   m_Navigation:
     m_Mode: 3
     m_SelectOnUp: {fileID: 0}
@@ -452,6 +745,131 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+=======
+  tmp_ButtonLabel: {fileID: 1048996439}
+  buttonSprite: {fileID: 0}
+  TextColor: 1
+  TextScale: 1
+  TextRotation: 1
+  ImageColor: 0
+  ImageScale: 0
+  ImageRotation: 0
+  textStartColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  textHighlightColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  textPressedColor: {r: 0, g: 0, b: 0, a: 1}
+  imageStartColor: {r: 0, g: 0, b: 0, a: 0}
+  imageHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  imagePressedColor: {r: 0, g: 0, b: 0, a: 0}
+  textStartScale: {x: 1, y: 1, z: 1}
+  texthighlightScale: {x: 1.05, y: 1.05, z: 1.05}
+  textPressedScale: {x: 1.1, y: 1.1, z: 1.1}
+  imageStartScale: {x: 0, y: 0, z: 0}
+  imageHighlighedScale: {x: 0, y: 0, z: 0}
+  imagePressedScale: {x: 0, y: 0, z: 0}
+  textStartRotation: {x: 0, y: 0, z: 0}
+  textHighlightRotation: {x: 3, y: 3, z: 3}
+  textPressedRotation: {x: -5, y: -5, z: -5}
+  imageStartRotation: {x: 0, y: 0, z: 0}
+  imageHighlightRotation: {x: 0, y: 0, z: 0}
+  imagePressedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &274205287
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 274205282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 274205286}
+          m_MethodName: HoverEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 274205286}
+          m_MethodName: ResetImages
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 274205286}
+          m_MethodName: PressedButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: JumpForward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 658160121}
+          m_MethodName: QuitGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+>>>>>>> 83c0b1df9a0ebbf66936b666e32cc18d7e6c05ca
 --- !u!1 &560125359
 GameObject:
   m_ObjectHideFlags: 0
@@ -526,6 +944,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560125359}
   m_CullTransparentMesh: 0
+--- !u!1 &658160120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658160122}
+  - component: {fileID: 658160121}
+  m_Layer: 0
+  m_Name: _MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &658160121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658160120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a793910d5eeeec2489da50b3c327a6c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &658160122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658160120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 489.51263, y: 314.598, z: -66.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712208319
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +1215,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783624248
 GameObject:
@@ -1310,7 +1771,7 @@ GameObject:
   - component: {fileID: 1378745188}
   - component: {fileID: 1378745187}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DateLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1706,7 +2167,7 @@ RectTransform:
   m_Children:
   - {fileID: 982564106}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1770,6 +2231,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+<<<<<<< HEAD
   m_text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
     ullamcorper purus vel tellus tempus pretium. Phasellus diam ex, pulvinar et mollis
     at, volutpat at metus. Fusce consequat placerat quam at placerat. Aliquam at nisl
@@ -1777,6 +2239,24 @@ MonoBehaviour:
     pellentesque sed dapibus eu, semper nec nibh. Curabitur hendrerit enim nec nunc
     posuere convallis. In hac habitasse platea dictumst. Maecenas non enim odio. Proin
     ut est porttitor orci vulputate luctus. Fusce accumsan blandit.\n\r\n"
+=======
+  m_text: 'In other news the Best of the Roaring 20s vinyl disk as hit shelves in
+    record stores across the country, this the perfect time to drop the needle down
+    on some vinyl and enjoy the expected hits of the next decade. The record has all
+    your favourites artists playing their hit songs;
+
+    The Virginians - Nothing Could be Sweeter
+
+    Paul Whiteman & His Orchestra - Love Me
+
+    Johnny Marvin - True Blue Lou
+
+    Arden &Ohmen with their Orchestra - We''ll be the Same - vocal by Frank Luthor
+
+    Nat Skillet & The Viktor Orchestra - The Things That Were Made For Love.
+
+    Fred Rich & His Orchestra - Nobody But You'
+>>>>>>> 83c0b1df9a0ebbf66936b666e32cc18d7e6c05ca
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a34c91600bcc584c8fb209fae56e9df, type: 2}
   m_sharedMaterial: {fileID: 5173210284753645234, guid: 3a34c91600bcc584c8fb209fae56e9df,
@@ -1822,7 +2302,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 544
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1846,12 +2326,21 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -255.86821, w: -334.1953}
   m_textInfo:
     textComponent: {fileID: 1596669710}
+<<<<<<< HEAD
     characterCount: 544
     spriteCount: 0
     spaceCount: 82
     wordCount: 81
     linkCount: 0
     lineCount: 13
+=======
+    characterCount: 586
+    spriteCount: 0
+    spaceCount: 110
+    wordCount: 108
+    linkCount: 0
+    lineCount: 14
+>>>>>>> 83c0b1df9a0ebbf66936b666e32cc18d7e6c05ca
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1934,12 +2423,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-    ullamcorper purus vel tellus tempus pretium. Phasellus diam ex, pulvinar et mollis
-    at, volutpat at metus. Fusce consequat placerat quam at placerat. Aliquam at nisl
-    sed sem sagittis facilisis. Duis mollis et purus ut gravida. Aenean metus dui,
-    pellentesque sed dapibus eu, semper nec nibh. Curabitur hendrerit enim nec nunc
-    posuere convallis. In hac habitasse platea dictumst. Maecenas no\n\r\n"
+  m_text: "Just a reminder for our newer readers, this article is brought to you by
+    Keaton de Jager 1636214, Duncan Smale 1619539, Monique Butler 1624661, Mamello
+    Roboroko , Benjamin Lazarus 1453543. The fantastic type face used in this article
+    comes from dafont.com and is used with permission of the creators. \nSound effects
+    and the like are from 99sounds.org or freesound.org and are used with permission
+    from the creators. The most important member of the team is you the reader. Enjoy
+    the game! If you can read this."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a34c91600bcc584c8fb209fae56e9df, type: 2}
   m_sharedMaterial: {fileID: 5173210284753645234, guid: 3a34c91600bcc584c8fb209fae56e9df,
@@ -1985,7 +2475,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 492
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2009,12 +2499,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 39.163506, z: -255.86821, w: -334.1953}
   m_textInfo:
     textComponent: {fileID: 1705756030}
-    characterCount: 462
+    characterCount: 510
     spriteCount: 0
-    spaceCount: 70
-    wordCount: 69
+    spaceCount: 86
+    wordCount: 88
     linkCount: 0
-    lineCount: 11
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2167,6 +2657,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2071567670}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< HEAD
   m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
@@ -2203,3 +2694,131 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+=======
+  m_Script: {fileID: 11500000, guid: 42c7b0bca94dbc944836f11cc0d66efb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tmp_ButtonLabel: {fileID: 783624250}
+  buttonSprite: {fileID: 0}
+  TextColor: 1
+  TextScale: 1
+  TextRotation: 1
+  ImageColor: 0
+  ImageScale: 0
+  ImageRotation: 0
+  textStartColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
+  textHighlightColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
+  textPressedColor: {r: 0, g: 0, b: 0, a: 1}
+  imageStartColor: {r: 0, g: 0, b: 0, a: 0}
+  imageHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  imagePressedColor: {r: 0, g: 0, b: 0, a: 0}
+  textStartScale: {x: 1, y: 1, z: 1}
+  texthighlightScale: {x: 1.05, y: 1.05, z: 1.05}
+  textPressedScale: {x: 1.1, y: 1.1, z: 1.1}
+  imageStartScale: {x: 0, y: 0, z: 0}
+  imageHighlighedScale: {x: 0, y: 0, z: 0}
+  imagePressedScale: {x: 0, y: 0, z: 0}
+  textStartRotation: {x: 0, y: 0, z: 0}
+  textHighlightRotation: {x: -3, y: -3, z: -3}
+  textPressedRotation: {x: 5, y: 5, z: 5}
+  imageStartRotation: {x: 0, y: 0, z: 0}
+  imageHighlightRotation: {x: 0, y: 0, z: 0}
+  imagePressedRotation: {x: 0, y: 0, z: 0}
+--- !u!114 &2071567675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2071567670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2071567674}
+          m_MethodName: HoverEnter
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2071567674}
+          m_MethodName: ResetImages
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2071567674}
+          m_MethodName: PressedButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: JumpBackward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 658160121}
+          m_MethodName: StartGame
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+>>>>>>> 83c0b1df9a0ebbf66936b666e32cc18d7e6c05ca
