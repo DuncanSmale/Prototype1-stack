@@ -203,7 +203,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &30550115
 MonoBehaviour:
@@ -292,6 +292,9 @@ GameObject:
   m_Component:
   - component: {fileID: 206304664}
   - component: {fileID: 206304663}
+  - component: {fileID: 206304666}
+  - component: {fileID: 206304667}
+  - component: {fileID: 206304665}
   m_Layer: 0
   m_Name: _MusicController
   m_TagString: Untagged
@@ -410,6 +413,215 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206304665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 920b44f37873cb14bbd8294ff7144123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  main_source: {fileID: 206304663}
+  sfx_source: {fileID: 206304666}
+  HoverSFX: {fileID: 206304667}
+--- !u!82 &206304666
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 3d4b3b11ee05a8d44abce3921680d021,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: c2a978debf9c45740b22fbcbc887a14b, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 0.247
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 197
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+--- !u!82 &206304667
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206304662}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 52f71c3bbfd777142a2cb83e3287a8f8,
+    type: 2}
+  m_audioClip: {fileID: 8300000, guid: 9521128c53b702c49b93fe816d1b5d5d, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 0.343
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 196
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &274205282
 GameObject:
   m_ObjectHideFlags: 0
@@ -509,7 +721,7 @@ MonoBehaviour:
   ImageRotation: 0
   textStartColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   textHighlightColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
-  textPressedColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  textPressedColor: {r: 0, g: 0, b: 0, a: 1}
   imageStartColor: {r: 0, g: 0, b: 0, a: 0}
   imageHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   imagePressedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -553,6 +765,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 1
@@ -578,6 +801,28 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 274205286}
           m_MethodName: PressedButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: JumpForward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 658160121}
+          m_MethodName: QuitGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -663,6 +908,49 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 560125359}
   m_CullTransparentMesh: 0
+--- !u!1 &658160120
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 658160122}
+  - component: {fileID: 658160121}
+  m_Layer: 0
+  m_Name: _MenuManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &658160121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658160120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c04d287e6e55a4e957a59b70b3aa4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!4 &658160122
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 658160120}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 489.51263, y: 314.598, z: -66.75}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &712208319
 GameObject:
   m_ObjectHideFlags: 0
@@ -892,7 +1180,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &783624248
 GameObject:
@@ -1448,7 +1736,7 @@ GameObject:
   - component: {fileID: 1378745188}
   - component: {fileID: 1378745187}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: DateLine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1844,7 +2132,7 @@ RectTransform:
   m_Children:
   - {fileID: 982564106}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1908,11 +2196,22 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: In other news the Best of the Roaring 20s vinyl disk as hit shelves in record
-    stores across the country, this the perfect time to drop the needle down on some
-    vinyl and enjoy the expected hits of the next decade. The record has all your
-    favourites artists playing their hit songs. The track list has been revealed and
-    you can expect;
+  m_text: 'In other news the Best of the Roaring 20s vinyl disk as hit shelves in
+    record stores across the country, this the perfect time to drop the needle down
+    on some vinyl and enjoy the expected hits of the next decade. The record has all
+    your favourites artists playing their hit songs;
+
+    The Virginians - Nothing Could be Sweeter
+
+    Paul Whiteman & His Orchestra - Love Me
+
+    Johnny Marvin - True Blue Lou
+
+    Arden &Ohmen with their Orchestra - We''ll be the Same - vocal by Frank Luthor
+
+    Nat Skillet & The Viktor Orchestra - The Things That Were Made For Love.
+
+    Fred Rich & His Orchestra - Nobody But You'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a34c91600bcc584c8fb209fae56e9df, type: 2}
   m_sharedMaterial: {fileID: 5173210284753645234, guid: 3a34c91600bcc584c8fb209fae56e9df,
@@ -1958,7 +2257,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 544
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1982,12 +2281,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -255.86821, w: -334.1953}
   m_textInfo:
     textComponent: {fileID: 1596669710}
-    characterCount: 333
+    characterCount: 586
     spriteCount: 0
-    spaceCount: 61
-    wordCount: 62
+    spaceCount: 110
+    wordCount: 108
     linkCount: 0
-    lineCount: 7
+    lineCount: 14
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2070,12 +2369,13 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: " Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-    ullamcorper purus vel tellus tempus pretium. Phasellus diam ex, pulvinar et mollis
-    at, volutpat at metus. Fusce consequat placerat quam at placerat. Aliquam at nisl
-    sed sem sagittis facilisis. Duis mollis et purus ut gravida. Aenean metus dui,
-    pellentesque sed dapibus eu, semper nec nibh. Curabitur hendrerit enim nec nunc
-    posuere convallis. In hac habitasse platea dictumst. Maecenas no\n\r\n"
+  m_text: "Just a reminder for our newer readers, this article is brought to you by
+    Keaton de Jager 1636214, Duncan Smale 1619539, Monique Butler 1624661, Mamello
+    Roboroko , Benjamin Lazarus 1453543. The fantastic type face used in this article
+    comes from dafont.com and is used with permission of the creators. \nSound effects
+    and the like are from 99sounds.org or freesound.org and are used with permission
+    from the creators. The most important member of the team is you the reader. Enjoy
+    the game! If you can read this."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 3a34c91600bcc584c8fb209fae56e9df, type: 2}
   m_sharedMaterial: {fileID: 5173210284753645234, guid: 3a34c91600bcc584c8fb209fae56e9df,
@@ -2121,7 +2421,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 492
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -2145,12 +2445,12 @@ MonoBehaviour:
   m_margin: {x: 0, y: 39.163506, z: -255.86821, w: -334.1953}
   m_textInfo:
     textComponent: {fileID: 1705756030}
-    characterCount: 462
+    characterCount: 510
     spriteCount: 0
-    spaceCount: 70
-    wordCount: 69
+    spaceCount: 86
+    wordCount: 88
     linkCount: 0
-    lineCount: 11
+    lineCount: 12
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -2317,7 +2617,7 @@ MonoBehaviour:
   ImageRotation: 0
   textStartColor: {r: 0.2924528, g: 0.2924528, b: 0.2924528, a: 1}
   textHighlightColor: {r: 0.3490566, g: 0.3490566, b: 0.3490566, a: 1}
-  textPressedColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  textPressedColor: {r: 0, g: 0, b: 0, a: 1}
   imageStartColor: {r: 0, g: 0, b: 0, a: 0}
   imageHighlightColor: {r: 0, g: 0, b: 0, a: 0}
   imagePressedColor: {r: 0, g: 0, b: 0, a: 0}
@@ -2361,6 +2661,17 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: HoverSound
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   - eventID: 1
@@ -2386,6 +2697,28 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 2071567674}
           m_MethodName: PressedButton
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 206304665}
+          m_MethodName: JumpBackward
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 658160121}
+          m_MethodName: StartGame
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
