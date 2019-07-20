@@ -7,7 +7,7 @@ public class ClickController : MonoBehaviour
 {
     private Transform selected = null; //object that was clicked on
     private Vector4 offsetExtents; //bounds for movement: x = left, y = right, z = up, w = down.
-
+    public Transform MCam;
     [SerializeField] private LayerMask layerMask; //layermask to change which layer the ray cast will be performed on
     float aspectRatio;
     float offsetx;
@@ -24,6 +24,7 @@ public class ClickController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
         HandleClick();//function to handle what happens when the player clicks
         HandleMovement();
     }
@@ -35,10 +36,10 @@ public class ClickController : MonoBehaviour
             Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //takes the mouse position and transforms it into world co-ordinates.
             Vector2 selectedBounds = selected.GetComponentInChildren<Collider>().bounds.extents;//gets the colliders bounds 
             //Vector4 ext = CalculateExtents();   
-
+            
             float x = Mathf.Clamp((Mathf.RoundToInt(newPos.x) + offsetx), 
-                -(int)(camSize * aspectRatio - offsetExtents.y) + offsetx, 
-                (int)(camSize * aspectRatio - offsetExtents.x) - offsetx); //creates a clamped value
+                MCam.position.x - (int)(camSize * aspectRatio - offsetExtents.y) + offsetx, 
+                MCam.position.x + (int)(camSize * aspectRatio - offsetExtents.x) - offsetx); //creates a clamped value
             float y = Mathf.Clamp((Mathf.RoundToInt(newPos.y) + offsety),
                 -(camSize - offsetExtents.w), 
                 (camSize - offsetExtents.z)); //creates a clamped value
@@ -69,6 +70,9 @@ public class ClickController : MonoBehaviour
         //Debug.Log(offsetExtents);
         offsetx = ((offsetExtents.x + offsetExtents.y) % 2) == 0 ? 0 : 0.5f; //sets the offsetx for odd bounded objects
         offsety = ((offsetExtents.z + offsetExtents.w) % 2) == 0 ? 0 : 0.5f; //sets offset y
+
+       
+
         //Debug.Log(String.Format("{0} X {1} Y", offsetx, offsety));
     }
 
