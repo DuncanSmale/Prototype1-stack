@@ -39,7 +39,6 @@ public class ClickController : MonoBehaviour
             float x = Mathf.Clamp((Mathf.RoundToInt(newPos.x) + offsetx), 
                 -(int)(camSize * aspectRatio - offsetExtents.y) + offsetx, 
                 (int)(camSize * aspectRatio - offsetExtents.x) - offsetx); //creates a clamped value
-            Debug.Log(-(int)(camSize * aspectRatio - offsetExtents.y));
             float y = Mathf.Clamp((Mathf.RoundToInt(newPos.y) + offsety),
                 -(camSize - offsetExtents.w), 
                 (camSize - offsetExtents.z)); //creates a clamped value
@@ -67,10 +66,10 @@ public class ClickController : MonoBehaviour
             extents.w = temp.w > extents.w ? temp.w : extents.w;
         }
         offsetExtents = extents;
-        Debug.Log(offsetExtents);
+        //Debug.Log(offsetExtents);
         offsetx = ((offsetExtents.x + offsetExtents.y) % 2) == 0 ? 0 : 0.5f; //sets the offsetx for odd bounded objects
         offsety = ((offsetExtents.z + offsetExtents.w) % 2) == 0 ? 0 : 0.5f; //sets offset y
-        Debug.Log(String.Format("{0} X {1} Y", offsetx, offsety));
+        //Debug.Log(String.Format("{0} X {1} Y", offsetx, offsety));
     }
 
     private void HandleClick()
