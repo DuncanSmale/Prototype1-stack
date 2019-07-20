@@ -10,6 +10,8 @@ public class ClickController : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask; //layermask to change which layer the ray cast will be performed on
     float aspectRatio;
+    float offsetx;
+    float offsety;
 
     float camSize;
 
@@ -32,14 +34,12 @@ public class ClickController : MonoBehaviour
         {
             Vector3 newPos = Camera.main.ScreenToWorldPoint(Input.mousePosition); //takes the mouse position and transforms it into world co-ordinates.
             Vector2 selectedBounds = selected.GetComponentInChildren<Collider>().bounds.extents;//gets the colliders bounds 
-            //Vector4 ext = CalculateExtents();
-            float offsetx = ((offsetExtents.x + offsetExtents.y) % 2) == 0 ? 0.5f : 0; //sets the offsetx for odd bounded objects
-            float offsety = ((offsetExtents.z + offsetExtents.w) % 2) == 0 ? 0.5f : 0; //sets offset y 
+            //Vector4 ext = CalculateExtents();   
 
             float x = Mathf.Clamp((Mathf.RoundToInt(newPos.x) + offsetx), 
-                -(int)(camSize * aspectRatio - offsetExtents.y) - 1f, 
-                (int)(camSize * aspectRatio - offsetExtents.x) - 1f); //creates a clamped value
-
+                -(int)(camSize * aspectRatio - offsetExtents.y) + offsetx, 
+                (int)(camSize * aspectRatio - offsetExtents.x) - offsetx); //creates a clamped value
+            Debug.Log(-(int)(camSize * aspectRatio - offsetExtents.y));
             float y = Mathf.Clamp((Mathf.RoundToInt(newPos.y) + offsety),
                 -(camSize - offsetExtents.w), 
                 (camSize - offsetExtents.z)); //creates a clamped value
@@ -67,6 +67,10 @@ public class ClickController : MonoBehaviour
             extents.w = temp.w > extents.w ? temp.w : extents.w;
         }
         offsetExtents = extents;
+        Debug.Log(offsetExtents);
+        offsetx = ((offsetExtents.x + offsetExtents.y) % 2) == 0 ? 0 : 0.5f; //sets the offsetx for odd bounded objects
+        offsety = ((offsetExtents.z + offsetExtents.w) % 2) == 0 ? 0 : 0.5f; //sets offset y
+        Debug.Log(String.Format("{0} X {1} Y", offsetx, offsety));
     }
 
     private void HandleClick()
