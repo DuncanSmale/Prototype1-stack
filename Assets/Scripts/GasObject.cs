@@ -5,9 +5,16 @@ using UnityEngine;
 public class GasObject : MonoBehaviour
 {
 
+    float EnableTime = 0;
+
+    private void Awake()
+    {
+        EnableTime = Time.time + 0.5f;
+    }
+
     private void OnEnable()
     {
-        if (Time.time > 0.5f && GasController.Controller.isIn(this) == false)
+        if (Time.time > EnableTime && GasController.Controller.isIn(this) == false)
         {
             GasController.Controller.addGas(this);
         }
