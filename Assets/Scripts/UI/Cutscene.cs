@@ -1,23 +1,30 @@
 ﻿using System.Collections;
-using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
 public class Cutscene : MonoBehaviour
 {
+    [Header("Control Objects")]
     public GameObject MusicControl;
     public GameObject MenuScreen;
 
+    [Header("Scene Stages")]
     public GameObject Scene1;
     public GameObject Scene2;
 
+    [Header("Count Down")]
     public TMP_Text Counter;
     public Image FillSprite;
 
+    [Header("Slide Show")]
     public Image Scene2_Img;
     public Sprite[] graphics;
 
+    [Header("Audio")]
+    public AudioSource VideoSound;
+    public AudioClip Boring;
     private bool Counting = false;
 
     private void OnEnable() {
@@ -46,9 +53,16 @@ public class Cutscene : MonoBehaviour
     }
 
     IEnumerator FlipBook() {
+        AsyncOperation load = SceneManager.LoadSceneAsync(1, LoadSceneMode.Single);
+        load.allowSceneActivation = false;
         for (int i = 0; i < graphics.Length; i++) {
             Scene2_Img.sprite = graphics[i];
             yield return new WaitForSecondsRealtime(3);
         }
+        VideoSound.Stop();
+        VideoSound.clip = Boring;
+        VideoSound.Play();
+        yield return new WaitForSecondsRealtime(0.4f);
+        load.allowSceneActivation = true;
     }
 }

@@ -28,6 +28,10 @@ public class CameraMove : MonoBehaviour
             MoveLeft();
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape)) {
+            BackToMainMenu();
+        }
+
     }
 
     public void MoveRight () {
@@ -51,5 +55,9 @@ public class CameraMove : MonoBehaviour
         that.SetActive(true);
         yield return new WaitForSecondsRealtime (delay);
         that.SetActive(false);
+    }
+
+    public void BackToMainMenu () {
+        UnityEngine.SceneManagement.SceneManager.LoadScene(0);
     }
 }
