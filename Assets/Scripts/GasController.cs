@@ -25,6 +25,9 @@ public class GasController : MonoBehaviour
 
     private int TotalParticles;
     private int CurrentNumParticles;
+
+    public GameObject Winscreen;
+    public GameObject Losescreen;
     
     private void Awake()
     {
@@ -58,7 +61,7 @@ public class GasController : MonoBehaviour
         CurrentNumParticles -= 1;
         gasParticles.Remove(_gas);
         if (CurrentNumParticles == 0) {
-            Debug.Log("Win!");
+            Winscreen.SetActive(true);
         }
     }
 
@@ -77,5 +80,9 @@ public class GasController : MonoBehaviour
     {
         fillAmount += Time.deltaTime * (0.1f * ((float)CurrentNumParticles/TotalParticles)) / TimeToComplete * scalingFactor;
         gasMeter.fillAmount = fillAmount;
+
+        if (fillAmount >= 1) {
+            Losescreen.SetActive(true);
+        }
     }
 }
