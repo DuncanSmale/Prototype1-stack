@@ -6,12 +6,17 @@ using UnityEngine;
 public class MainMenuManager : MonoBehaviour
 {
 
+    public GameObject Cutscene;
     public void StartGame() {
-        SceneManager.LoadSceneAsync(1);
+        Cutscene.SetActive(true);
     }
 
     public void QuitGame () {
         Application.Quit();
         Debug.Log("Quit");
+    }
+
+    public void EndScene () {
+        SceneManager.LoadScene(1);
     }
 }
