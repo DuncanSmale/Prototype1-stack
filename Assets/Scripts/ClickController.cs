@@ -90,12 +90,7 @@ public class ClickController : MonoBehaviour
                     selected.GetComponent<Object>().Pickup();
                     CalculateExtents();
                 }
-            }
-        }
-        if (Input.GetMouseButtonDown(1))
-        {
-            if (selected != null)
-            {
+            } else if (selected != null) {
                 selected.GetComponent<Object>().Placed();
                 selected = null;
                 offsetExtents = Vector4.zero;

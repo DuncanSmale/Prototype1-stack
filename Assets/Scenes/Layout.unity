@@ -713,6 +713,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Ironing Board - I
       objectReference: {fileID: 0}
+    - target: {fileID: 2648065064173532358, guid: 407170aaf16f5b842831704e0d1aae1e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2648065064173532359, guid: 407170aaf16f5b842831704e0d1aae1e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -853,6 +858,111 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 345913578}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &429482763
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 429482764}
+  - component: {fileID: 429482767}
+  - component: {fileID: 429482766}
+  - component: {fileID: 429482765}
+  m_Layer: 5
+  m_Name: Right (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &429482764
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429482763}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 936572228}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 400}
+  m_Pivot: {x: 1, y: 0.5}
+--- !u!114 &429482765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429482763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1018962601}
+          m_MethodName: MoveRight
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &429482766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429482763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3019608}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 0b2a6bd248461064e80575ed162d676c, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &429482767
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 429482763}
+  m_CullTransparentMesh: 0
 --- !u!1001 &469791981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1453,6 +1563,7 @@ GameObject:
   - component: {fileID: 708006395}
   - component: {fileID: 708006398}
   - component: {fileID: 708006397}
+  - component: {fileID: 708006399}
   - component: {fileID: 708006396}
   m_Layer: 5
   m_Name: Right
@@ -1460,7 +1571,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &708006395
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1489,53 +1600,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 708006394}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Script: {fileID: 11500000, guid: 42c7b0bca94dbc944836f11cc0d66efb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Navigation:
-    m_Mode: 3
-    m_SelectOnUp: {fileID: 0}
-    m_SelectOnDown: {fileID: 0}
-    m_SelectOnLeft: {fileID: 0}
-    m_SelectOnRight: {fileID: 0}
-  m_Transition: 1
-  m_Colors:
-    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
-    m_ColorMultiplier: 1
-    m_FadeDuration: 0.1
-  m_SpriteState:
-    m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 0}
-    m_SelectedSprite: {fileID: 0}
-    m_DisabledSprite: {fileID: 0}
-  m_AnimationTriggers:
-    m_NormalTrigger: Normal
-    m_HighlightedTrigger: Highlighted
-    m_PressedTrigger: Pressed
-    m_SelectedTrigger: Selected
-    m_DisabledTrigger: Disabled
-  m_Interactable: 1
-  m_TargetGraphic: {fileID: 708006397}
-  m_OnClick:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1018962601}
-        m_MethodName: MoveRight
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
-      Culture=neutral, PublicKeyToken=null
+  tmp_ButtonLabel: {fileID: 0}
+  buttonSprite: {fileID: 0}
+  TextColor: 0
+  TextScale: 0
+  TextRotation: 0
+  ImageColor: 0
+  ImageScale: 0
+  ImageRotation: 0
+  textStartColor: {r: 0, g: 0, b: 0, a: 0}
+  textHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  textPressedColor: {r: 0, g: 0, b: 0, a: 0}
+  imageStartColor: {r: 0, g: 0, b: 0, a: 0}
+  imageHighlightColor: {r: 0, g: 0, b: 0, a: 0}
+  imagePressedColor: {r: 0, g: 0, b: 0, a: 0}
+  textStartScale: {x: 0, y: 0, z: 0}
+  texthighlightScale: {x: 0, y: 0, z: 0}
+  textPressedScale: {x: 0, y: 0, z: 0}
+  imageStartScale: {x: 0, y: 0, z: 0}
+  imageHighlighedScale: {x: 0, y: 0, z: 0}
+  imagePressedScale: {x: 0, y: 0, z: 0}
+  textStartRotation: {x: 0, y: 0, z: 0}
+  textHighlightRotation: {x: 0, y: 0, z: 0}
+  textPressedRotation: {x: 0, y: 0, z: 0}
+  imageStartRotation: {x: 0, y: 0, z: 0}
+  imageHighlightRotation: {x: 0, y: 0, z: 0}
+  imagePressedRotation: {x: 0, y: 0, z: 0}
 --- !u!114 &708006397
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1573,6 +1666,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 708006394}
   m_CullTransparentMesh: 0
+--- !u!114 &708006399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 708006394}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1862395651, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 4
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  - eventID: 1
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+      m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
+        Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!1 &711915789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2174,6 +2298,7 @@ RectTransform:
   - {fileID: 1332165755}
   - {fileID: 726396453}
   - {fileID: 650197155}
+  - {fileID: 429482764}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2193,6 +2318,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Hoover - L
+      objectReference: {fileID: 0}
+    - target: {fileID: 598651968933032053, guid: 9e251d180b9a689489a7d0947b7fad1b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 598651968933032052, guid: 9e251d180b9a689489a7d0947b7fad1b,
         type: 3}
@@ -2653,6 +2783,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Couch - L
+      objectReference: {fileID: 0}
+    - target: {fileID: 7147830217246715258, guid: ef524b6aca94e1542a37033236feb342,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7147830217246715257, guid: ef524b6aca94e1542a37033236feb342,
         type: 3}
@@ -3690,8 +3825,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9267d54e8a5ea494bb8f86992b2c64fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TimeToComplete: 30
-  scalingFactor: 1
+  TimeToComplete: 20
+  scalingFactor: 2
 --- !u!4 &1953594869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5935363166187227771, guid: 8216d034e929a0d4ab37ffede9b14c58,
@@ -3958,6 +4093,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Candles - T
+      objectReference: {fileID: 0}
+    - target: {fileID: 1258872369108186012, guid: a220638a37ebbaf4388220cc27e0be71,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1258872369108186015, guid: a220638a37ebbaf4388220cc27e0be71,
         type: 3}

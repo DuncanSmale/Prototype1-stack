@@ -32,7 +32,7 @@ public class CameraMove : MonoBehaviour
 
     public void MoveLeft () {
         PositionIndex --;
-        if (PositionIndex <= 0) {
+        if (PositionIndex < 0) {
             PositionIndex = Positions.Length - 1;
         }
         StartCoroutine(DeactivateSprite(LeftMotionSprite));
