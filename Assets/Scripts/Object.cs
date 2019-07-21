@@ -29,7 +29,7 @@ public class Object : MonoBehaviour
         Collider[] colliders = Physics.OverlapBox(b.center, b.extents, transform.rotation, mask);
             foreach (Collider overlap in colliders)
             {
-                Debug.Log(overlap.name);
+                //Debug.Log(overlap.name);
                 gasParticles.Add(overlap.gameObject);
                 overlap.gameObject.SetActive(false);
             }

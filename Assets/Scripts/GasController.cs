@@ -57,6 +57,9 @@ public class GasController : MonoBehaviour
     {
         CurrentNumParticles -= 1;
         gasParticles.Remove(_gas);
+        if (CurrentNumParticles == 0) {
+            Debug.Log("Win!");
+        }
     }
 
     public bool isIn(GasObject _gas)

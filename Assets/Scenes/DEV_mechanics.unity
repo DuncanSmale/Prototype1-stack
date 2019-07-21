@@ -918,6 +918,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5b10414cd09cf14b98d6fd9dd2dc9cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MCam: {fileID: 1757962776}
   layerMask:
     serializedVersion: 2
     m_Bits: 256
