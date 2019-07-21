@@ -19,6 +19,15 @@ public class CameraMove : MonoBehaviour
         if (PositionIndex < Positions.Length && PositionIndex >= 0) 
             transform.position = Positions[PositionIndex];
 
+
+        if (Input.GetKeyDown(KeyCode.RightArrow)) {
+            MoveRight();
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow)) {
+            MoveLeft();
+        }
+
     }
 
     public void MoveRight () {
